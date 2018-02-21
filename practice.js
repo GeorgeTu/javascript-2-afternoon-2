@@ -386,9 +386,21 @@ var user1 = {
 };
 // Do not edit the code above.
 
-//Code Here
+var user2 = {
+  name: 'George Tu',
+  email: 'gt2@gmail.com',
+  password: 'JavaScript',
+  username: 'Loopy'
+};
 
+var user3 = {
+  name: 'George Three',
+  email: 'gt33@gmail.com',
+  password: 'iScript',
+  username: 'infoop'
+};
 
+users.push(user1, user2, user3)
 
 /*
   Now you have a very common data structure. 
@@ -400,7 +412,11 @@ var user1 = {
   Once you find the particular index he's located in, delete him from the array.
 */
 
-//Code Here
+users.forEach((user, ind, arr) => {
+  if (user.email === 'tylermcginnis33@gmail.com'){
+    arr.splice(ind, 1);
+  }
+});
 
 
 
