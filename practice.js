@@ -51,10 +51,12 @@ var family = ['Tyler', 'Jordyn', 'Ryan', 'Chelsey', 'Ireland'];
   Loop through the given array and alert every item in the array.
 */
 
-// var looper = function (family){
-//   for(let i=0; i < family.length; i++){
-//     alert(family[i])
-//   }
+var looper = function (family){
+  for(var i=0; i < family.length; i++){
+    alert(family[i])
+  }
+}
+
 
 
 
@@ -71,11 +73,11 @@ var letters = ['A', 'B', 'C', 'D', 'E'];
 */
 
 var reversedLooper = function(letters){
-  for (let i = letters.length -1; i>=0; i--){
+  for (let i = letters.length-1; i>=0; i--){
     alert(letters[i])
   } 
 }
-
+reversedLooper(letters)
 
 
 ////////// PROBLEM 5 //////////
@@ -91,9 +93,11 @@ var nums = [1,2,3,6,22,98,45,23,22,12];
 
 var evenFinder = function (nums){
   array = [];
+  for(i=0; i<nums.length;i++){
   if(nums[i]%2===0){
     array.push(nums[i])
   } 
+}
   return array;
 }
 
@@ -230,21 +234,14 @@ var numbers = [5, '9', 16, 19, '25', '34', 48];
   *Verify your answer is correct. --> [15, 19, 26, 29, 35, 44, 58]
 */
   
-function addTen (numbers){
-  newArr = []
-  numbers.forEach(function (num, i, arr){
-  parseInt(numbers[i]) + 10
-  newArr.push(i)
-})
+function addTen (arr){
+  var newArr = []
+  for(i=0; i< arr.length; i++){
+  newArr.push(Number(arr[i]))
+  newArr[i] += 10
+}
 return newArr
 }
-  
-//   for( i=0; i < numbers.length; i++){
-//     number(numbers[i]) + 10
-//     newArr.push(i)
-//   }
-//   return newArr
-// }
 
 
 
@@ -289,13 +286,15 @@ function longer (arr1, arr2){
 
 function both (arr1, arr2){
   newArr = []
-
+  for(var i=0;i<arr1.length;i++){
+    for(var k=0;k<arr2.length;k++){
+  if(arr1[i]===arr2[k]){
+    newArr.push(arr1[i])
+      }
+    }
+  }
+  return newArr
 }
-//   if(arr1[i]===arr2[i]){
-//     newArr.push([i])
-//   }
-//   return newArr
-// }
 
 
 
@@ -345,11 +344,18 @@ devMountainEmployees.push(tyler, cahlan, ryan, colt)
   Loop through your devMountainEmployees until you find cahlan, then remove him from the array.
 */
 
-devMountainEmployees.forEach(element => {
-  if (devMountainEmployees[i]===cahlan){
+for(var i=0; i<devMountainEmployees.length; i++){  
+if (devMountainEmployees[i]===cahlan){
     devMountainEmployees.splice(i, 1)
   }
-});
+}
+
+
+// devMountainEmployees.forEach(element => {
+//   if (devMountainEmployees[i]===cahlan){
+//     devMountainEmployees.splice(i, 1)
+//   }
+// });
 
 
 
